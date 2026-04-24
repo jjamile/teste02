@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Te amo ❤️</title>
+
+<style>
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #ffe6ee;
+    overflow-x: hidden;
+}
+
+/* Tela inicial */
+#inicio{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Botão */
+button{
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background: #e60d4e;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background: #c50b41;
+}
+
+/* Coração */
+.heart{
+    width: 100px;
+    height: 100px;
+    background: #e60d4e;
+    position: absolute;
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.heart::before,
+.heart::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: #e60d4e;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before{
+    top: -50px;
+}
+
+.heart::after{
+    left: 50px;
+}
+
+/* Animação */
+.expand{
+    animation: crescer 2s forwards;
+}
+
+@keyframes crescer{
+    0%{
+        transform: scale(1) rotate(-45deg);
+    }
+    100%{
+        transform: scale(15) rotate(-45deg);
+    }
+}
+
+/* Conteúdo */
+#conteudo{
+    display: none;
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    color: #e60d4e;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    margin: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer; \
+    transition: 0.5s;
+}
+
+li:hover{
+    background: #f399b4;
+}
+
+li ul{
+    height: 0;
+    overflow: hidden;
+    color: #e60d4e;
+}
+
+li:hover ul{
+    height: 30px;
+}
+
+.texto{
+    margin: auto;
+    margin-top: 30px;
+    width: 60%;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    color: #e40c4d;
+}
+
+.foto-casal{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.foto-casal img{
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.foto-casal img:hover{
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="inicio">
+    <button onclick="abrir()">Clique aqui ❤️</button>
+</div>
+
+<div class="heart" id="heart"></div>
+
+<div id="conteudo">
+    <h1>Passe o mouse nas opções 💕</h1>
+
+    <ul>
+        <li>Razão número 1
+            <ul>Porque sempre foi, e é você</ul>
+        </li>
+        <li>Razão número 2
+            <ul>Porque acredita em mim</ul>
+        </li>
+        <li>Razão número 3
+            <ul>Porque me faz sentir melhor</ul>
+        </li>
+        <li>Razão número 4
+            <ul>Porque aprendi e amadureci com você</ul>
+        </li>
+    </ul>
+
+    <div class="texto">
+        Amor, eu só queria que você soubesse o quanto você é importante pra mim. 
+        Eu posso não falar isso o tempo todo, mas eu sinto em cada detalhe o quanto eu te amo.
+
+        Você é alguém que eu escolho todos os dias. Mesmo quando as coisas não estão perfeitas, 
+        o que eu sinto por você continua aqui, firme.
+
+        Eu te amo de um jeito leve, mas verdadeiro. 💙
+    </div>
+</div>
+
+<script>
+function abrir(){
+    document.getElementById("inicio").style.display = "none";
+
+    let heart = document.getElementById("heart");
+    heart.style.display = "block";
+    heart.classList.add("expand");
+
+    setTimeout(() => {
+        heart.style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+    }, 2000);
+}
+</script>
+
+<div class="foto-casal">
+    <img src="imagens/foto.jpg.jpeg" alt="Foto nossa">
+</div>
+
+</body>
+</html>
+
+    
+    
+
+    <hr>
+</body>
+</html>
